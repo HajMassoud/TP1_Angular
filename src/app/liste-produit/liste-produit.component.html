@@ -1,0 +1,16 @@
+<h2>Listes des Livres </h2>
+
+
+<table class="table">
+    <tr>
+        <th>id</th><th>Description</th><th>Quantite</th><th>Action1</th><th>Action2</th>
+    </tr>
+    <tr *ngFor="let l of lv">
+        <td (click)="actualForm(l)">{{ l.id}}</td>
+        <td (click)="actualForm(l)">{{ l.description}}</td>
+        <td (click)="actualForm(l)">{{ l.qte}}</td>
+        <td><button class="btn btn-sm btn-outline-danger" (click)="Supprimer(l.id)">X</button></td>
+       
+        <td><button class="btn btn-sm btn-outline-success" (click)="Edit(l)">Edit</button></td>        
+    </tr>
+</table>
